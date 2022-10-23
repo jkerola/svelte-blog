@@ -1,38 +1,41 @@
-# create-svelte
+# minimalist blog made with svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<img src="assets/blog_frontpage.png" width="400">
+<img src="assets/blog_archive.png" width="400">
+<img src="assets/blog_resume.png" width="400">
 
-## Creating a project
+A quick project to learn svelte.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Development
 
-```bash
-# create a new project in the current directory
-npm init svelte
+Run these to start local development:
 
-# create a new project in my-app
-npm init svelte my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+```shell
+npm install
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+This project uses [pre-commit](https://pre-commit.com) hooks. Install them with:
 
-To create a production version of your app:
+```shell
+python3 pip install pre-commit
+pre-commit install
+```
 
-```bash
+## Customizing the template
+
+To create a quick homepage/blog for yourself:
+
+- Modify _src/routes/index.svelte_ to customize the frontpage
+- Modify _src/blog.config.js_ with your social media links
+- Modify _src/routes/contact/contact.md_ with your contact details
+- Modify _src/routes/resume/resume.md_ with your resume details
+- Add/remove blog posts under the _src/routes/blog_ directory
+
+Then build the project with
+
+```shell
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+and host it wherever you wish.
