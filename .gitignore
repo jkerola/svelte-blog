@@ -6,3 +6,6 @@ node_modules
 .env
 .env.*
 !.env.example
+
+# test markdown files
+*test.md

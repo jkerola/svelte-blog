@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer base {
+  a,
+  li,
+  table,
   p {
     @apply font-code;
   }
@@ -16,4 +19,54 @@
   h6 {
     @apply font-comfort;
   }
+
+  a {
+    @apply hover:text-blue-500 transition duration-300;
+  }
+  pre {
+    @apply bg-neutral-50 py-2 px-4 rounded;
+  }
+  code {
+    @apply text-gray-700;
+  }
+
+  h1 {
+    @apply text-3xl;
+  }
+
+  table {
+    @apply mx-auto my-4 shadow;
+  }
+
+  thead {
+    @apply lowercase bg-slate-300 border;
+  }
+
+  th,
+  td {
+    @apply py-2 px-4 border-r border-b border-l;
+  }
+
+  tbody {
+    @apply lowercase bg-slate-100 border-b;
+  }
+
+  tr {
+  }
+
+  blockquote {
+    @apply border-l bg-slate-100 p-2 rounded;
+  }
+}
+
+.markdown-li {
+}
+
+.markdown-ul {
+  @apply mb-2;
+}
+
+.markdown-img {
+  display: block;
+  @apply mx-auto my-8;
 }
